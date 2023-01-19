@@ -107,7 +107,7 @@ $(document).on("click", '.card__cover', async function(event) {
     
     if(result.isConfirmed) {
       Swal.fire('Waiting metamask payment..', '', 'info')
-      let tx = await polystream.connect(signer).ask_movie(movie_id, localStorage.getItem("publicKey"), { value: "118621429198427550" });
+      let tx = await polystream.connect(signer).ask_movie(movie_id, localStorage.getItem("publicKey"), { value: "106141450465377000" });
       receipt = await tx.wait();
       if (receipt.status) {
         let txn_test = await provider.getTransaction(receipt.transactionHash);
